@@ -111,3 +111,147 @@ h1 {
 ul li {
   font-family: "Mali", cursive;
 }
+
+
+/* พื้นหลังสีชมพูไล่เฉดแบบเคลื่อนไหว */
+body {
+  background: linear-gradient(
+    135deg,
+    #fff1f5,
+    #ffe4ec,
+    #fce1f5,
+    #fff0e5
+  );
+  background-size: 400% 400%;
+  animation: backgroundMove 15s ease infinite;
+  overflow-x: hidden;
+}
+
+/* เอฟเฟกต์พื้นหลังเคลื่อนไหว */
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* การ์ดโปรไฟล์ค่อย ๆ ปรากฏขึ้น */
+.card {
+  animation: cardAppear 1s ease-out;
+}
+
+/* เอฟเฟกต์ตอนเปิดหน้า */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* หัวข้อโปรไฟล์ค่อย ๆ ปรากฏ */
+h1 {
+  animation: titleAppear 1.2s ease-out;
+}
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* เพิ่มเอฟเฟกต์แสงนุ่ม ๆ ให้การ์ด */
+.card {
+  box-shadow:
+    0 10px 30px rgba(196, 92, 131, 0.12),
+    0 0 20px rgba(255, 182, 193, 0.15);
+}
+
+
+
+/* กลุ่มดอกไม้และหัวใจ */
+.floating-decorations {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* ดอกไม้และหัวใจแต่ละดวง */
+.floating-decorations span {
+  position: absolute;
+  bottom: -60px;
+  font-size: 30px;
+  color: #e9a3bd;
+  opacity: 0.45;
+  animation: floatUp 12s linear infinite;
+}
+
+/* กำหนดตำแหน่งและความเร็ว */
+.floating-decorations span:nth-child(1) {
+  left: 10%;
+  animation-duration: 14s;
+}
+
+.floating-decorations span:nth-child(2) {
+  left: 30%;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+
+.floating-decorations span:nth-child(3) {
+  left: 55%;
+  animation-duration: 16s;
+  animation-delay: 4s;
+}
+
+.floating-decorations span:nth-child(4) {
+  left: 75%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+}
+
+.floating-decorations span:nth-child(5) {
+  left: 90%;
+  animation-duration: 15s;
+  animation-delay: 3s;
+}
+
+/* เอฟเฟกต์ลอยขึ้น */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.45;
+  }
+
+  85% {
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
