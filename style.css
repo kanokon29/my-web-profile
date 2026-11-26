@@ -82,3 +82,32 @@ ul li {
 ul li:hover {
   background-color: #ffe5ee;
 }
+
+
+/* ฟอนต์ลายมือทั้งหน้า */
+body {
+  font-family: "Mali", cursive;
+}
+
+/* จัดหัวข้อโปรไฟล์ให้อยู่ตรงกลาง */
+h1 {
+  text-align: center;
+  font-family: "Mali", cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: #c45c83;
+  margin: 30px auto;
+}
+
+/* ฟอนต์ลายมือสำหรับชื่อโปรไฟล์ */
+#profile-name {
+  font-family: "Itim", cursive;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ฟอนต์ลายมือสำหรับข้อมูลและรายการทักษะ */
+.bio,
+ul li {
+  font-family: "Mali", cursive;
+}
