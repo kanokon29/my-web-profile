@@ -1,41 +1,84 @@
+
 /* ภารกิจที่ 2: จัดสไตล์ <body> */
 body {
-  background-color: papayawhip
-  font-family: Arial, sans-serif;
+  background-color: #fff1f5;
+  font-family: "Arial", sans-serif;
+  color: #4a3b40;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 /* ภารกิจที่ 3: จัดสไตล์ .card */
 .card {
   width: 300px;
+  max-width: 100%;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #f5dce5;
+  box-shadow: 0 10px 30px rgba(180, 120, 145, 0.15);
   margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อเลื่อนเมาส์ไปบนการ์ด */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(180, 120, 145, 0.22);
 }
 
 /* ภารกิจที่ 4: จัดสไตล์รูปภาพ <img> */
 .card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 5px solid #ffe3ec;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 15px;
+  margin: 0 auto 20px;
 }
 
 /* ภารกิจที่ 5: จัดสไตล์ชื่อ #profile-name */
 #profile-name {
-  color: #333333;
+  color: #c45c83;
   text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 15px;
+  letter-spacing: 0.5px;
 }
 
 /* ภารกิจที่ 6: จัดสไตล์ .bio */
 .bio {
-  color: #666666;
+  color: #78636c;
   font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* ภารกิจที่ 7: จัดสไตล์ <ul> */
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
+}
+
+/* จัดสไตล์รายการข้อมูล */
+ul li {
+  background-color: #fff5f8;
+  color: #6b4b59;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-left: 4px solid #e9a3bd;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #ffe5ee;
 }
